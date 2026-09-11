@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: echo-server-container
-          image: paulplintus/homelab:echo_server_v1.0
+          image: paulplintus/homelab:echo_server_v1.0.1
           ports:
             - containerPort: 8080
       imagePullSecrets:
