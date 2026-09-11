@@ -22,7 +22,7 @@ spec:
       containers:
         - image: paulplintus/homelab:echo_server_v1.0
           ports:
-            containerPort: 8080
+            - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -33,10 +33,10 @@ metadata:
 spec:
   selector:
     app: echo-server
-    ports:
-      - protocol: TCP
-        port: 80
-        targetPort: 8080
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
 
 ---
 apiVersion: networking.k8s.io/v1
