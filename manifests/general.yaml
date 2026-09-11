@@ -24,6 +24,8 @@ spec:
           image: paulplintus/homelab:echo_server_v1.0
           ports:
             - containerPort: 8080
+      imagePullSecrets:
+        - name: registry-creds-dpr
 
 ---
 apiVersion: v1
