@@ -20,7 +20,8 @@ spec:
       namespace: echo-server-ns
     spec:
       containers:
-        - image: paulplintus/homelab:echo_server_v1.0
+        - name: echo-server-container
+          image: paulplintus/homelab:echo_server_v1.0
           ports:
             - containerPort: 8080
 
