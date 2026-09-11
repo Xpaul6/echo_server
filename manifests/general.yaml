@@ -16,7 +16,7 @@ spec:
       app: echo-server
   template:
     metadata:
-      lables:
+      labels:
         app: echo-server
     spec:
       containers:
