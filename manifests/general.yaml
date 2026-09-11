@@ -25,7 +25,7 @@ spec:
           ports:
             - containerPort: 8080
       imagePullSecrets:
-        - name: registry-creds-dpr
+        - name: dpr-secret
 
 ---
 apiVersion: v1
