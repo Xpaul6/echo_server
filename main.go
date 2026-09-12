@@ -6,7 +6,7 @@ import (
 )
 
 func echo(w http.ResponseWriter, req *http.Request) {
-	w.Write([]byte(req.URL.Path))
+	w.Write([]byte(req.URL.Path[1:]))
 	w.Write([]byte(string("\n")))
 }
 
