@@ -22,6 +22,13 @@ spec:
       containers:
         - name: echo-server-container
           image: paulplintus/homelab:echo_server_v1.0.2
+          resources:
+            requests:
+              memory: "10Mi"
+              cpu: "10m"
+            limits:
+              memory: "20Mi"
+              cpu: "50m"
           ports:
             - containerPort: 8080
       imagePullSecrets:
