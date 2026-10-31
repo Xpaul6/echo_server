@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: echo-server-container
-          image: paulplintus/homelab:echo_server_v1.0.2
+          image: localhost:5000/echo-server:latest
           resources:
             requests:
               memory: "10Mi"
@@ -31,8 +31,6 @@ spec:
               cpu: "50m"
           ports:
             - containerPort: 8080
-      imagePullSecrets:
-        - name: dpr-secret
 
 ---
 apiVersion: v1
