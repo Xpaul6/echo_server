@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: echo-server-container
-          image: localhost:5000/echo-server:latest
+          image: registry.local:5000/echo-server:latest
           resources:
             requests:
               memory: "10Mi"
