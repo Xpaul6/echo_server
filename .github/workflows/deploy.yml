@@ -35,7 +35,8 @@ jobs:
             git fetch && git pull &&
             docker build . -t registry.local:5000/echo-server &&
             minikube image load registry.local:5000/echo-server &&
-            kubectl apply -f manifests/general.yaml
+            kubectl apply -f manifests/general.yaml &&
+            kubectl rollout restart deployment/echo-server -n echo-server-ns
           "
 
       - name: Cleanup

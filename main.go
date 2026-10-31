@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-const VERSION = "1.0"
+const VERSION = "1.1"
 
 func echo(w http.ResponseWriter, req *http.Request) {
 	w.Write([]byte(req.URL.Path[6:]))
