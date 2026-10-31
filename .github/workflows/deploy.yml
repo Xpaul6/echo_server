@@ -34,7 +34,7 @@ jobs:
             cd ${{ secrets.WORK_DIR }} &&
             git fetch && git pull &&
             docker build . -t registry.local:5000/echo-server &&
-            docker push registry.local:5000/echo-server &&
+            minikube image load registry.local:5000/echo-server &&
             kubectl apply -f manifests/general.yaml
           "
 
